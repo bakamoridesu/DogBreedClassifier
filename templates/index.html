@@ -1,7 +1,6 @@
 <!doctype html>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script language="javascript" type="text/javascript">
-<script type="text/javascript">var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
 $(function () {
     $("#fileupload").change(function () {
         $("#dvPreview").html("");
@@ -36,6 +35,7 @@ $(function() {
     $('button').click(function() {
 	var $input = $("#fileupload");
     var fd = new FormData;
+	var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     fd.append('file', $input.prop('files')[0]);
         $.ajax({
             url: $SCRIPT_ROOT + '/_upload',
