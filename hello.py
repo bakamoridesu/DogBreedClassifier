@@ -5,7 +5,6 @@ from keras.preprocessing import image
 import cv2
 from flask import Flask, request, redirect, url_for
 from werkzeug.utils import secure_filename
-UPLOAD_FOLDER = 'C:/Lab/'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 from flask import Flask, render_template
 import main
