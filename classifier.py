@@ -37,15 +37,12 @@ def path_to_tensor(img_path):
     img = Image.open(img_path)
     img = np.array(img, dtype = np.float32)
     x = cv2.resize(img,(224,224))
-    print(x.shape)
     return np.expand_dims(x, axis=0)
 
 def ResNet50_predict_labels(img_path):
     # returns prediction vector for image located at img_path
     img = preprocess_input(path_to_tensor(img_path))
-    print(img)
     prediction = ResNet50_model.predict(img)
-    print(prediction)
     return np.argmax(prediction)
 
 def dog_detector(img_path):
