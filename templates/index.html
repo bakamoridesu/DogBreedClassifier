@@ -1,6 +1,7 @@
 <!doctype html>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script language="javascript" type="text/javascript">
+<script type="text/javascript">var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
 $(function () {
     $("#fileupload").change(function () {
         $("#dvPreview").html("");
