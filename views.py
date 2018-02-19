@@ -18,7 +18,7 @@ def upload_file():
         with graph[0].as_default():
             breed = classifier.classify_dog_or_human(file)
         return breed
-    return "Error"
+    return render_template('index.html')
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
