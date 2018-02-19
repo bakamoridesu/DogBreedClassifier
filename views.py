@@ -9,7 +9,7 @@ from app import app
 def index():
     return render_template('index.html')
 
-@app.route('/u/', methods=['GET', 'POST'])
+@app.route('/_upload', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
         file = request.files['file']
