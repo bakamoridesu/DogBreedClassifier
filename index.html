@@ -38,7 +38,7 @@ $(function() {
 	var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     fd.append('file', $input.prop('files')[0]);
         $.ajax({
-            url: $SCRIPT_ROOT + '/_upload',
+            url: "{{ url_for('upload_file') }}",
             data: fd,
             type: 'POST',
 			processData: false,
