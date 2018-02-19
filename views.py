@@ -15,8 +15,8 @@ def upload_file():
         file = request.files['file']
         filename = secure_filename(file.filename)
         breed = ''
-        with graph[0].as_default():
-            breed = classifier.classify_dog_or_human(file)
+        #with graph[0].as_default():
+            #breed = classifier.classify_dog_or_human(file)
         return breed
     return render_template('index.html')
 
